@@ -37,3 +37,22 @@
    0 12px 10px -3px #39a2db;
 }
 
+/* --- Add your new classes below --- */
+
+.btn-round {
+  width: 70px;
+  height: 70px;
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  transition: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}

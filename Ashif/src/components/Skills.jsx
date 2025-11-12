@@ -23,7 +23,7 @@ export default function Skills() {
     <section id="skills" className="w-full bg-white text-black py-24">
       <div className="container mx-auto text-center">
         <div className="inline-block mb-12">
-          <h2 className="text-4xl font-bold font-pixel underline-wavy-yellow">My Tech Stack</h2>
+          <h2 className="text-5xl font-bold font-pixel underline-wavy-yellow inline-block">Tech-Stack</h2>
         </div>
       </div>
       <div className="flex flex-col gap-4">
