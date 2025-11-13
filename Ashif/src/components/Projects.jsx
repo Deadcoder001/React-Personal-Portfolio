@@ -76,7 +76,7 @@ const projectData = [
         imageUrl: project6Img,
         liveUrl: 'https://jkssewa.org',
         repoUrl: '#',
-        tags: ['React', 'Express'],
+        tags: ['HTML', 'CSS', 'JavaScript','PHP', 'MySQL'],
     },
     {
         title: 'Janaewa',
