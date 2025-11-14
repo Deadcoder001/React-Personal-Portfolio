@@ -50,9 +50,9 @@ function App() {
         <Hero />
         <About />
         <Skills />
-        {/* <Education /> */}
+         <Education />
         <Projects />
-        <Certifications />
+        {/* <Certifications /> */}
         <ContactForm />
         <SocialMagnet />
       </main>

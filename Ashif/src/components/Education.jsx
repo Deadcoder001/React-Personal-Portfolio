@@ -10,14 +10,14 @@ export default function Education() {
           <div className="inline-block mb-12">
             <h2 className="text-4xl md:text-5xl font-bold font-pixel">
               <Highlighter action="underline" color="#FFD700">
-                My Education 🎓
+                Qualifications
               </Highlighter>
             </h2>
           </div>
           <div className="relative flex max-w-lg mx-auto flex-col items-center justify-center overflow-hidden rounded-lg border bg-background p-4">
             <Tree
               className="w-full bg-background overflow-hidden rounded-md"
-              initialExpandedItems={["Education", "KU", "MC", "BA", "BHS"]}
+              initialExpandedItems={["Education", "KU", "MC", "BA", "BHS", "Certifications", "Cisco", "IBM", "AWS"]}
             >
               <Folder element="My Education" value="Education">
                 <Folder element="Kaziranga University" value="KU">
@@ -41,6 +41,26 @@ export default function Education() {
                   </File>                   
                 </Folder>
               </Folder>
+                <Folder element="My Certifications" value="Certifications">
+                  <Folder element="Cisco" value="Cisco">
+                    <File value="Cisco-Intro">
+                      <p>Introduction to Cybersecurity</p>
+                    </File>
+                    <File value="Cisco-Jr">
+                      <p>Jr. Cybersecurity Analyst</p>
+                    </File>
+                  </Folder>
+                  <Folder element="IBM" value="IBM">
+                    <File value="IBM-Python">
+                      <p>Python 101 for Data Science</p>
+                    </File>
+                  </Folder>
+                  <Folder element="AWS" value="AWS">
+                    <File value="AWS-Cloud">
+                      <p>Cloud Foundations (AWS Academy Graduate)</p>
+                    </File>
+                  </Folder>
+                </Folder>
             </Tree>
           </div>
         </div>
