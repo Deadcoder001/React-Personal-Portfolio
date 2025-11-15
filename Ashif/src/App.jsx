@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,7 +16,15 @@ import { SmoothCursor } from './components/ui/smooth-cursor';
 import './App.css'
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
     // 1. Initialize Lenis with custom settings for scroll speed
     const lenis = new Lenis({
       duration: 1.2, // Affects the animation duration
@@ -36,6 +44,7 @@ function App() {
 
     // 4. Cleanup on component unmount
     return () => {
+      window.removeEventListener('resize', handleResize);
       lenis.destroy();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       gsap.ticker.remove(lenis.raf);
@@ -44,7 +53,7 @@ function App() {
 
   return (
     <>
-      <SmoothCursor />
+      {!isMobile && <SmoothCursor />}
       <Navbar />
       <main>
         <Hero />

@@ -31,8 +31,8 @@ const projectData = [
         title: 'Portfolio Website',
         description: 'My personal portfolio website built with React and Tailwind CSS.',
         imageUrl: project7Img,
-        liveUrl: '#',
-        repoUrl: '#',
+        liveUrl: 'https://ashifelahi.netlify.app',
+        repoUrl: 'https://github.com/Deadcoder001/React-Personal-Portfolio.git',
         tags: ['React', 'Tailwind CSS', 'GSAP', 'Spline', 'Framer Motion', 'Lenis'],
     },
     {
@@ -144,14 +144,16 @@ const ProjectCard = ({ project }) => (
                     >
                         Live Demo
                     </a>
-                    <a
-                        href={project.repoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-gray-900 font-semibold text-xs transition-colors duration-300"
-                    >
-                        View Code
-                    </a>
+                    {project.repoUrl && project.repoUrl !== '#' && (
+                        <a
+                            href={project.repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-gray-900 font-semibold text-xs transition-colors duration-300"
+                        >
+                            View Code
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div id="contact" className="relative flex w-full items-center justify-center overflow-hidden bg-background py-16 md:py-24">
+    <div id="contact" className="relative flex w-full items-center justify-center overflow-hidden bg-background pt-16 pb-32 md:pt-24 md:pb-48">
       <GridPattern
         width={30}
         height={30}
