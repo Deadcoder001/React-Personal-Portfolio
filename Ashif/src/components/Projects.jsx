@@ -1,6 +1,10 @@
+"use client"
+
 import React, { useState } from 'react';
 import GlareHover from './GlareHover';
 import { Highlighter } from "@/components/ui/highlighter";
+import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
+import { cn } from "@/lib/utils";
 
 
 // --- 1. Import your project images ---
@@ -168,9 +172,21 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="w-full text-black py-20 grid-wrapper"
+            // --- 1. Added bg-white (or bg-background) here ---
+            className="relative w-full text-black py-20 overflow-hidden bg-white"
         >
-            <div className="grid-background"></div>
+            <InteractiveGridPattern
+                className={cn(
+                    "absolute inset-0 h-full w-full",
+                    "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
+                )}
+                // --- 2. Added the missing props from your demo ---
+                width={20}
+                height={20}
+                squares={[80, 80]}
+                // You can set a static color for the squares
+                squaresClassName="fill-gray-100"
+            />
 
             <div className="relative z-10 px-2">
                 <div className="text-center mb-12">

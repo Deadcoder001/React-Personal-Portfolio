@@ -1,6 +1,18 @@
 import React from 'react';
 import logo from '../assets/logo3.png'; // Make sure this path is correct
 
+function handleNavClick(e, id) {
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+}
+
 /**
  * A minimal, transparent navigation bar.
  * It uses Flexbox to space out the logo and navigation links.
@@ -17,9 +29,27 @@ export default function Navbar() {
         
         {/* Navigation Links */}
         <div className="flex items-center gap-4 text-sm font-medium text-white/90 sm:gap-6">
-          <a href="#about" className="transition hover:text-white">About</a>
-          <a href="#projects" className="transition hover:text-white">Projects</a>
-          <a href="#contact" className="transition hover:text-white">Contact</a>
+          <a
+            href="#about"
+            onClick={e => handleNavClick(e, 'about')}
+            className="transition hover:text-white"
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            onClick={e => handleNavClick(e, 'projects')}
+            className="transition hover:text-white"
+          >
+            Projects
+          </a>
+          <a
+            href="#contact"
+            onClick={e => handleNavClick(e, 'contact')}
+            className="transition hover:text-white"
+          >
+            Contact
+          </a>
         </div>
       </nav>
     </header>

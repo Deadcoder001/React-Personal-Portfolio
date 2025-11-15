@@ -43,6 +43,19 @@ export default function Hero() {
           <div className="flex justify-center gap-4 mt-8">
             <a
               href="#projects"
+              onClick={e => {
+                e.preventDefault();
+                setTimeout(() => {
+                  const el = document.getElementById('projects');
+                  if (el) {
+                    el.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'nearest'
+                    });
+                  }
+                }, 100);
+              }}
               className="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-black transition-all duration-300 bg-white rounded-lg shadow-lg pointer-events-auto hover:bg-gray-200 hover:scale-105"
             >
               View My Work
