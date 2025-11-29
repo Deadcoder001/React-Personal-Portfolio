@@ -80,7 +80,7 @@ const projectData = [
     {
         title: 'Scabbard Tech',
         description: 'A Digital Marketing website built with React, Vue and Tailwind CSS.',
-        imageUrl: project4Img,
+        videoUrl: 'https://res.cloudinary.com/dktapziq9/video/upload/v1764397211/1764397136159111_zlcckk.mp4',
         liveUrl: 'https://scabbardtech.com',
         repoUrl: '#',
         tags: ['React', 'Vue', 'Tailwind CSS'],
