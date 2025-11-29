@@ -15,7 +15,6 @@ const skillsRow1 = [
 ];
 
 const skillsRow2 = [
-
   <Html key="html" />,
   <MongoDB key="mongodb" />,
   <PostgreSQL key="postgresql" />,
@@ -38,7 +37,21 @@ export default function Skills() {
           </h2>
         </div>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="relative max-w-screen-lg mx-auto flex flex-col gap-4">
+        {/* Left Blur */}
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-10"
+             style={{
+               background: 'linear-gradient(to right, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0))',
+               filter: 'blur(6px)'
+             }}
+        />
+        {/* Right Blur */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-10"
+             style={{
+               background: 'linear-gradient(to left, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0))',
+               filter: 'blur(6px)'
+             }}
+        />
         <VelocityText baseVelocity={-5} numCopies={4}>
           {skillsRow1.map((logo, index) => (
             <div key={index} className="w-20 h-20 text-gray-600 mx-4">

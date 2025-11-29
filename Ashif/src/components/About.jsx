@@ -17,7 +17,7 @@ export default function About({ scrollContainerRef }) {
           scrollContainerRef={scrollContainerRef}
           baseOpacity={0}
           enableBlur={true}
-          baseRotation={5}
+          baseRotation={0}
           blurStrength={10}
           containerClassName="my-12"
           textClassName="font-sans text-base sm:text-lg md:text-xl"

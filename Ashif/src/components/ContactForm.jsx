@@ -17,12 +17,6 @@ export default function ContactForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Message sent!');
-    setForm({ name: '', email: '', message: '' });
-  };
-
   return (
     <div id="contact" className="relative flex w-full items-center justify-center overflow-hidden bg-background pt-16 pb-32 md:pt-24 md:pb-48">
       <GridPattern
@@ -38,7 +32,10 @@ export default function ContactForm() {
         {/* Centered Form */}
         <div className="max-w-md mx-auto px-8 py-6 bg-gray-50 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Contact Me</h2>
-          <form onSubmit={handleSubmit}>
+          <form 
+            action="https://formspree.io/f/xrbwdkqb" 
+            method="POST"
+          >
             <div className="mb-4">
               <label className="block text-gray-800 mb-1" htmlFor="name">Your Name</label>
               <input

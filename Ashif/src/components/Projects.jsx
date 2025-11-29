@@ -25,8 +25,9 @@ const projectData = [
     {
         title: 'Sahityaa Sangamm',
         description: 'A modern e-commerce platform built with Blade and Laravel.',
-        // --- 2. Use the imported variable here ---
-        imageUrl: project1Img,
+        // Use your Cloudinary video URL here:
+        videoUrl: 'https://res.cloudinary.com/dktapziq9/video/upload/v1764394626/1764393871242766_dqfnqn.mp4',
+        imageUrl: project1Img, // optional fallback
         liveUrl: 'https://sahityaasangamm.in',
         repoUrl: '#',
         tags: ['Blade', 'Laravel', 'MySQL'],
@@ -34,6 +35,7 @@ const projectData = [
     {
         title: 'Portfolio Website',
         description: 'My personal portfolio website built with React and Tailwind CSS.',
+        videoUrl: 'https://res.cloudinary.com/dktapziq9/video/upload/v1764395075/1764395026924189_ij9257.mov',
         imageUrl: project7Img,
         liveUrl: 'https://ashifelahi.netlify.app',
         repoUrl: 'https://github.com/Deadcoder001/React-Personal-Portfolio.git',
@@ -42,6 +44,7 @@ const projectData = [
     {
         title: 'ONS Trading Application',
         description: 'A real-time trading application using Django and Bootstrap 5.',
+        videoUrl: 'https://res.cloudinary.com/dktapziq9/video/upload/v1764395357/1764395325884939_lrg7f4.mp4',
         imageUrl: project5Img,
         liveUrl: 'https://ons-trading.onrender.com',
         repoUrl: 'https://github.com/Deadcoder001/ons_trading.git',
@@ -61,7 +64,7 @@ const projectData = [
         description: 'A modern e-commerce platform using React (Its Frontend Only For Now).',
         // --- 2. Use the imported variable here ---
         imageUrl: project3Img,
-        liveUrl: '#',
+        liveUrl: 'https://meghariseproducts.com',
         repoUrl: '#',
         tags: ['React', 'Vue', 'Tailwind CSS'],
     },
@@ -117,11 +120,22 @@ const ProjectCard = ({ project }) => (
         style={{ border: '1px solid #e5e7eb' }}
     >
         <div className="flex flex-col h-full bg-white rounded-[16px] overflow-hidden">
-            <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-1/2 object-cover"
-            />
+            {project.videoUrl ? (
+                <video
+                    src={project.videoUrl}
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-1/2 object-cover"
+                    poster={project.imageUrl}
+                />
+            ) : (
+                <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full h-1/2 object-cover"
+                />
+            )}
             <div className="p-4 flex-grow flex flex-col">
                 <h3 className="text-lg font-bold text-gray-900 mb-1">
                     {project.title}
