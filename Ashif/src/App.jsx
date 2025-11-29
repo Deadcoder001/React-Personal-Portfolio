@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import ProjectsMobile from './components/ProjectsMobile';
 import Certifications from './components/Certifications';
 import Education from './components/Education';
 import SocialMagnet from './components/SocialMagnet';
@@ -59,8 +60,8 @@ function App() {
         <Hero />
         <About />
         <Skills />
-         <Education />
-        <Projects />
+        <Education />
+        {isMobile ? <ProjectsMobile /> : <Projects />}
         {/* <Certifications /> */}
         <ContactForm />
         <SocialMagnet />

@@ -227,16 +227,25 @@ export default function Projects() {
                     ))}
                 </div>
 
-                {!showAll && projectData.length > 3 && (
-                    <div className="text-center mt-12">
+                {/* View More / View Less Button */}
+                <div className="text-center mt-12">
+                    {!showAll && projectData.length > 3 && (
                         <button
                             onClick={() => setShowAll(true)}
                             className="btn"
                         >
                             View More
                         </button>
-                    </div>
-                )}
+                    )}
+                    {showAll && (
+                        <button
+                            onClick={() => setShowAll(false)}
+                            className="btn"
+                        >
+                            View Less
+                        </button>
+                    )}
+                </div>
             </div>
         </section>
     );
