@@ -51,6 +51,15 @@ const projectData = [
         tags: ['Django', 'yfinance', 'Bootstrap 5'],
     },
     {
+        title: 'Creatorhub',
+        description: 'An Influencer Marketing platform for Creators and brands built with React.',
+        videoUrl: 'https://res.cloudinary.com/dktapziq9/video/upload/v1764396382/1764396334647746_qruqaf.mp4',
+
+        liveUrl: 'https://creatorhub.in',
+        repoUrl: '#',
+        tags: ['React', 'Node.js', 'MongoDB'],
+    },
+    {
         title: 'Tea Country',
         description: 'A Tourist website created with React.',
         // --- 2. Use the imported variable here ---
@@ -59,15 +68,15 @@ const projectData = [
         repoUrl: '#',
         tags: ['React', 'Vue', 'Tailwind CSS'],
     },
-    {
-        title: 'MeghaRise Products',
-        description: 'A modern e-commerce platform using React (Its Frontend Only For Now).',
-        // --- 2. Use the imported variable here ---
-        imageUrl: project3Img,
-        liveUrl: 'https://meghariseproducts.com',
-        repoUrl: '#',
-        tags: ['React', 'Vue', 'Tailwind CSS'],
-    },
+    // {
+    //     title: 'MeghaRise Products',
+    //     description: 'A modern e-commerce platform using React (Its Frontend Only For Now).',
+    //     // --- 2. Use the imported variable here ---
+    //     imageUrl: project3Img,
+    //     liveUrl: 'https://meghariseproducts.com',
+    //     repoUrl: '#',
+    //     tags: ['React', 'Vue', 'Tailwind CSS'],
+    // },
     {
         title: 'Scabbard Tech',
         description: 'A Digital Marketing website built with React, Vue and Tailwind CSS.',
