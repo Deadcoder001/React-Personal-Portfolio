@@ -1,4 +1,4 @@
-![Logo](https://github.com/Deadcoder001/AshifPf/blob/main/%20-5.jpg)
+![App Screenshot](https://github.com/Deadcoder001/AshifPf/blob/main/screen.gif)
 
 # AshifPf - Personal Portfolio 
 
@@ -10,7 +10,6 @@ This is a personal portfolio website built with React, Vite, and other modern we
 
 Live Demo: https://ashifelahi.netlify.app/
 
-![App Screenshot](https://github.com/Deadcoder001/AshifPf/blob/main/screen.gif)
 
 ## 🚀 About 
 A modern, responsive portfolio layout.
